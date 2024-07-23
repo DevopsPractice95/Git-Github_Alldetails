@@ -7,3 +7,7 @@ Vibrant
 
 dark mode
 video calls
+
+payment
+send
+Receive
