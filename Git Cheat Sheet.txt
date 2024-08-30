@@ -1,0 +1,131 @@
+Git Command
+What it Does
+1	Bare Repository	Repository that doesn’t have a working directory.
+2	Branch	An active area of development in Git. The newest commit displays the end of the branch.
+3	Blame	Refers to the most recent alteration to every line in the file. Shows Author, Revision, and Time.
+4	Checkout	This is talking about the process whereby a particular commit is chosen from the repository and the condition of the file associated with it and the directory tree are reproduced in the working directory.
+5	Commit	Record of a moment in Git history containing details of a changeset.
+6	Diff	The difference in changes between saved changes or two Commits.
+7	Detached Head	The state in which a specific commit is checked out rather than a branch.
+8	Fetch	Retrieves the most recent changes in the branch and the local or remote repositories.
+9	Fork	When you Fork the repository, you can add Commits and add Pull Requests.
+10	Hash	A unique SHA1 code for each Commit
+11	Head	The name of the Commit at the end of a Branch
+12	Index	A group of files that hold state information.
+13	Merge	Includes changes from named commits (from when their histories split from the current branch) into the current branch.
+14	Master	Git’s default development Branch
+15	Origin	This is the default Upstream Repository
+16	Pull Request	Suggests changes into the Master Branch
+17	Push	Pushes new changes once they’ve been committed
+18	Repository	A group of Commits, Branches and Tags to identify Commits.
+19	Working Tree	The directory of files that you are currently working on
+Git Commands Cheat Sheet – Configuration
+
+#
+Git Command
+Description
+1	git config –global user.name	Sets the username to be used for every action
+2	git config –global user.email	Sets the email to be used for every action.
+3	git config –global alias.	Generates a shortcut for the Git command.
+4	git config –system core.editor	Sets the text editor for all command actions.
+5	git config –global –edit	Opens global configuration file in the text editor to enable manual editing.
+6	git config –global color.ui auto	Turns on colour for command line outputs as a visual aid.
+Git Cheat Sheet – Set Up a Git Repository
+
+#
+Git Command
+Description
+1	git init	Initializes an empty Git repository in the current project.
+2	git clone (Repo URL)	Clones the repository from GitHub to the project folder.
+3	git clone (Repo URL) (Folder)	Clones the repository to a specific folder.
+4	git remote add origin
+https://github.com/username/(repo_name).git
+Creates a remote repository that points to your current GitHub repository.
+5	git remote	Displays the name of remote repositories.
+6	git remote -v	Displays the name and URL of remote repositories.
+7	git remote rm (remote repo name)	Gets rid of a remote repository.
+8	git remote set-url origin (git URL)	Changes a repository URL.
+9	git fetch	Obtains the most recent changes from the origin but doesn’t merge them.
+10	git pull	Obtains the most recent changes from the origin and merges them.
+Git Cheat Sheet – Local File Changes
+
+#
+Git Command
+Description
+1	git add (file name)	Adds current file changes to staging.
+2	git add .	Adds changes for the whole directory to staging but without deleting files.
+3	git add -A	Adds every new, modified, and deleted file to staging.
+4	git rm (file_name)	Stops tracking a file and gets rid it.
+5	git rm –cached (file_name)	Stops tracking the current file.
+6	git mv (file_name) (new_file_name)	Alters the filename and gets it ready for Commit.
+7	git checkout <deleted file name>	Undeletes a file and gets it ready for Commit
+8	git status	Displays the status of modified files.
+9	git ls-files –other –ignored –exclude-standard	Displays a list of each ignored file.
+10	git diff	Displays staged changes in the working directory and index.
+11	git diff –staged	Displays differences in files between the most recent version and staging.
+12	git diff (file_name)	Displays changes between a single file and the most recent Commit.
+Git Commands Cheat Sheet – Declare Commits
+
+#
+Git Command
+Description
+1	git commit -m “(message)”	Saves changes along with a custom message.
+2	git commit -am “(message)”	Adds all changes to staging and saves them with a custom message.
+3	git checkout	Switches to the provided Commit.
+4	git show	Outputs content changes and metadata for a particular Commit.
+5	git reset –hard	Rolls back all history and changes for a specific Commit.
+6	git reset –hard Head	Rolls back all local changes in the working directory.
+7	git log	Displays change history.
+8	git log -p	Displays the full page for each Commit.
+9	git log -oneline	Displays a list of Commits and a simple message.
+10	git log –follow (file_name)	Shows the history of the present file.
+11	git blame (file_name)	Displays all changes and the user’s name.
+12	git stash	Does an Interim save of all tracked files that have been modified.
+13	git stash pop	Restores files that were stashed most recently.
+14	git stash list	Displays all stash changesets.
+15	git stash apply	Applies the most recent stashed contents.
+16	git stash drop	Gets rid of the most recently stashed files
+17	git stash apply (stash id)	Re-applies content of a particular stash by ID.
+18	git stash drop (stash_id)	Drops particular stash content by ID.
+19	git push	Pushes changes to the Origin.
+16	git push origin (branch_name)	Pushes branch to the Origin.
+17	Git push -f origin (branch_name)	Force pushes the changes to the Origin.
+18	git tag (tag_name)	Specifies a tag for a version.
+19	git push	Pushes changes to the Origin.
+Git Commands Cheat Sheet – Branching
+
+#
+Git Command
+Description
+1	git branch	Displays a list of every branch.
+2	git branch	Makes a new branch.
+3	git branch -m	Changes the name of a branch.
+4	git branch -a	Lists both local and remote branches.
+5	git checkout -b	Creates a branch and switches to it.
+6	git checkout	Changes to a particular branch.
+7	git checkout -b origin/	Puts a remote branch from the origin in the local directory.
+8	git branch -d	Deletes the specified branch.
+9	git merge	Merges the current branch with the master (first checkout to master)
+10	git rebase	Integrates changes from one branch into another by rewriting the commit history to produce a linear succession of commits.
+11	git rebase	Rebases the current branch onto the base, which can be a Commit ID or a branch name.
+12	git fetch remote	Fetches the specified branch from the repository.
+13	git diff ..	Shows the differences between two branches.
+14	git pull –rebase	Fetches the remote copy of the current branch and rebases it into the local copy.
+15	git push –all	Pushes all the local branches to the specified remote repository.
+
+
+Plesk and Git Support
+Plesk lets you integrate with Git, because for most web developers it’s their go-to code management system. Git makes it easy to handle initial publishing and subsequent updates by deploying your website from repositories to a public directory.
+
+Here’s how to get started with Git:
+
+Install the Git extension in Plesk.
+Create a domain in Plesk with a service plan that lets you give management permission to Git.
+There are two types of repositories that you can add in Plesk, and you’ll choose the one that best fits your use case:
+
+Keep it local with a repository on your own machine. In this scenario, you send the changes to Plesk from your local repository, and then Plesk deploys the changes to your website.
+Use Git hosting remotely. You might want to do it this way if you’re already using a remote repository in BitBucket (bitbucket.org) or GitHub (github.com). You forward your changes to the remote repository, then Plesk gets them from it and deploys them to your website.
+When you’ve got Git repositories enabled in your domain, you’ll be able to see a list of the ones that have been created on its page. For each one you’ll see the name, the current branch and the deployment path. The Deploy button (look it for it near the repository name) lets you deploy the files from a repository (if it’s been set up for manual deployment) and the Pull Updates button lets you get the changes from the remote repository.
+
+Conclusion
+It’s much easier to work on a complex project when you have a list of Git commands in front of you, so we hope that this Git command cheat sheet proves to be useful.
